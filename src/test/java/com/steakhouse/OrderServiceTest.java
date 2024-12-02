@@ -63,7 +63,7 @@ class OrderServiceTest {
         // Mock dependencies to return valid values
         when(productService.getProductById(anyLong())).thenReturn(product);
         when(discountService.calculateDiscount(any())).thenReturn(new BigDecimal("2.00"));
-        when(taxService.calculateTax(any(), anyString())).thenReturn(new BigDecimal("1.00"));
+//        when(taxService.calculateTax(any(), anyString())).thenReturn(new BigDecimal("1.00"));
         when(orderRepository.save(any(Order.class))).thenReturn(order);
 
         // Execute the method being tested
